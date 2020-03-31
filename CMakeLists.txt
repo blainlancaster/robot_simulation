@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(612_project)
+project(robot_simulation)
 
 ## Use C++11
 add_definitions(-std=c++11)
