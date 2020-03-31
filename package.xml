@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>612_project</name>
+  <name>robot_simulation</name>
   <version>0.1.0</version>
   <description>MEEN 612/482 Mechanics of Robotics Manipulators class project</description>
   <maintainer email="aweaver@tamu.edu">Andrew Weaver</maintainer>
   <license>BSD</license>
   <url type="website">https://github.com/Lilweavs/612-Project</url>
-  <author email="aweaver@tamu.edu">Peter Fankhauser</author>
+  <author email="aweaver@tamu.edu">Andrew Weaver</author>
   
   <buildtool_depend>catkin</buildtool_depend>
   
