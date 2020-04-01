@@ -1,6 +1,17 @@
 <?xml version="1.0" ?>
+<!--
+This file is used to build your robot using the URDF file format.
+-->
+
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
     
+  <link name="world" />
+  
+  <joint name="fixed" type="fixed">
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+
     <!-- 1st link -->
   <link name="base_link">
     <static>true</static>
@@ -31,8 +42,8 @@
     </inertial>    
   </link>
 
-  <joint name="joint_1" type="continuous">
-    <origin xyz="0 0 0.130" rpy="0.785 0 0" />
+  <joint name="base_to_first_joint" type="continuous">
+    <origin xyz="0 0 0.130" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="first_link" />
 
@@ -71,5 +82,21 @@
 
 
 
+  <!-- Need For Gazebo Integration -->
 
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/simple_model</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <transmission name="base_to_first_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor_1">
+      <mechanicalReduction>5</mechanicalReduction>
+    </actuator>
+    <joint name="base_to_first_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
 </robot>
