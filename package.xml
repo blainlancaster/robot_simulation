@@ -7,7 +7,7 @@
   <license>BSD</license>
   <url type="website">https://github.com/Lilweavs/612-Project</url>
   <author email="aweaver@tamu.edu">Andrew Weaver</author>
-  
+  <author email="blain.ryan@tamu.edu">Blain Lancaster</author>
   <buildtool_depend>catkin</buildtool_depend>
   
   <!--<depend>eigen</depend>-->
