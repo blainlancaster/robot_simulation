@@ -16,11 +16,11 @@ All the code is ready to run now. First start a roscore:
 ```
 roscore
 ```
-Now open a new terminal and resource your workspace. Then start a empty gazebo world using:
+Now open a new terminal and re-source your workspace. Then start a empty gazebo world using:
 ```
 roslaunch gazebo_ros empty_world.launch
 ```
-Open another terminal and resource your workspace. Finally load the models to simulate run:
+Open another terminal and re-source your workspace. Finally load the models to simulate run:
 ```
 roslaunch robot_simulation spawn.launch
 ```
